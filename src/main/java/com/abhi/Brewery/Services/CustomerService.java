@@ -5,8 +5,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
-@Service
 public interface CustomerService {
 
     CustomerDTO getCustomerByID(UUID uuid);
+    CustomerDTO saveCustomer(CustomerDTO customerDTO);
+    void updateCustomer(UUID uuid, CustomerDTO customerDTO);
+    void deleteCustomer(UUID uuid);
 }

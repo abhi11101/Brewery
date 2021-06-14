@@ -5,8 +5,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
-@Service
 public interface BeerService {
 
     BeerDTO getBeerById(UUID beerID);
+    BeerDTO saveBeer(BeerDTO beerDTO);
+    void updateBeer(UUID uuid,BeerDTO beerDTO);
+    void deleteBeer(UUID uuid);
 }
